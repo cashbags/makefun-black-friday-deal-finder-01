@@ -1,0 +1,253 @@
+/* Deal Radar — one art direction: warm paper, ink text, sale red, amber badges.
+   High contrast everywhere; the sale price is the biggest thing on the card. */
+
+:root {
+  --paper: #fff7ec;
+  --card: #ffffff;
+  --ink: #1a1512;
+  --muted: #6b5d4f;
+  --line: #e8dcc8;
+  --red: #c81e1e;
+  --amber-bg: #f59e0b;
+  --amber-ink: #451a03;
+  --green: #166534;
+  --green-bg: #dcfce7;
+  --blue-bg: #dbeafe;
+  --blue-ink: #1e3a8a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+}
+
+.masthead {
+  background: var(--ink);
+  color: #fff7ec;
+  padding: 28px 20px 22px;
+  text-align: center;
+}
+
+.kicker {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--amber-bg);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 8px auto 0;
+  max-width: 640px;
+  font-size: 16px;
+  color: #e8dcc8;
+}
+
+.stats {
+  margin: 14px auto 0;
+  font-size: 15px;
+  color: #fff7ec;
+}
+
+.stats strong { color: var(--amber-bg); }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 0 16px;
+}
+
+.toolbar input[type="search"] {
+  flex: 2 1 260px;
+  min-width: 220px;
+}
+
+.toolbar select,
+.toolbar input {
+  padding: 11px 12px;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+}
+
+.toolbar select:focus,
+.toolbar input:focus {
+  outline: 3px solid var(--amber-bg);
+  outline-offset: 1px;
+  border-color: var(--ink);
+}
+
+.result-line {
+  max-width: 1180px;
+  margin: 14px auto 0;
+  padding: 0 16px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.result-line .hint {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.deals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1180px;
+  margin: 12px auto 0;
+  padding: 0 16px 8px;
+}
+
+.card {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--ink);
+  color: #fff7ec;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.store {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sale {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1;
+}
+
+.was {
+  font-size: 17px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.badge {
+  background: var(--amber-bg);
+  color: var(--amber-ink);
+  font-size: 16px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.save-line {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.verdict {
+  margin: 0;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.verdict-true { background: var(--green-bg); color: var(--green); font-weight: 600; }
+.verdict-strong { background: var(--blue-bg); color: var(--blue-ink); }
+.verdict-modest { background: #fef3c7; color: #78350f; }
+.verdict-thin { background: #f3f4f6; color: #4b5563; }
+
+.meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.store-link {
+  margin-top: auto;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.store-link:hover { text-decoration: underline; }
+
+.empty {
+  grid-column: 1 / -1;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  font-size: 17px;
+}
+
+footer {
+  max-width: 1180px;
+  margin: 8px auto 0;
+  padding: 0 16px 32px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer p { margin: 6px 0; }
+
+@media (max-width: 900px) {
+  .deals { grid-template-columns: repeat(2, 1fr); }
+  .masthead h1 { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .deals { grid-template-columns: 1fr; }
+  .masthead h1 { font-size: 32px; }
+  .sale { font-size: 30px; }
+}
