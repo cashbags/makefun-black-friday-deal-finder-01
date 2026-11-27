@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Radar — Black Friday 2026</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">BLACK FRIDAY &middot; CYBER MONDAY 2026</p>
+  <h1>Deal Radar</h1>
+  <p class="tagline">Real Black Friday deals, checked one by one — sale price, usual price, and whether the cut is really a cut.</p>
+  <p class="stats" id="stats"></p>
+</header>
+<section class="toolbar" aria-label="Search and filter deals">
+  <input id="search" type="search" placeholder="Search deals, stores, categories&hellip;" aria-label="Search deals">
+  <select id="category" aria-label="Filter by category"></select>
+  <select id="store" aria-label="Filter by store"></select>
+  <select id="discount" aria-label="Filter by discount">
+    <option value="">Any discount</option>
+    <option value="30">30% off or more</option>
+    <option value="40">40% off or more</option>
+    <option value="50">50% off or more</option>
+  </select>
+  <select id="sort" aria-label="Sort deals">
+    <option value="discount">Biggest discount first</option>
+    <option value="saving">Biggest saving first</option>
+    <option value="price">Lowest price first</option>
+  </select>
+</section>
+<p class="result-line"><span id="result-count"></span> <span class="hint">sorted best first</span></p>
+<main class="deals" id="deals"></main>
+<footer>
+  <p id="checked-note"></p>
+  <p>Prices change fast during the sale — confirm the price at the store before you buy. Deal Radar is an independent roundup and is not affiliated with any store named here.</p>
+</footer>
+</body>
+</html>
